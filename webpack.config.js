@@ -5,7 +5,10 @@ module.exports = {
   output: {
     path: __dirname,
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    options: {
+      sourceMap: true,
+    },
   },
   module: {
     loaders: [{
@@ -22,5 +25,6 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     contentBase: './'
-  }
+  },
+  devtool: 'source-map',
 };
